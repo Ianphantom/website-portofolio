@@ -44,6 +44,67 @@
                 </div>
                 <!-- /.container-fluid -->
 
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6 mb-6">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Quote For Today!</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">You Will never really fail until you stop trying</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 mb-6">
+                            <div class="card shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Thing to Do</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">Make a web design for euphoria competition</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mb-3">
+                    <div>
+                        <br> 
+                        <div class="row card" style="color: #0E3854; font-weight: 700;background:white">
+                            <div class="table-responsive" style="padding: 20px 0">
+                                <table id="example" class="table bg-light text-center" style="width:100%; color: #0E3854;">
+                                    <thead style="background : rgba(255,165,2,0.5); font-weight: 900;">
+                                        <tr>
+                                            <th>Nama Project</th>
+                                            <th>Tanggal</th>
+                                            <th>Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="background: white">
+                                    <?php
+                                        $projects = mysqli_query($con, "SELECT * FROM projects");
+                                        while($project = mysqli_fetch_array($projects)){ ?>
+                                        <tr>
+                                            <td><?php echo htmlentities($project['project_name']) ?></td>
+                                            <td><?php echo htmlentities($project['project_date']) ?></td>
+                                            <td><a href="editPortofolio?id=1&kode=IanFelixJS"><button class="btn btn-primary">Update</button></a></td>
+                                        </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- End of Main Content -->
 
