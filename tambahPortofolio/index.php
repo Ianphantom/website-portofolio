@@ -95,7 +95,7 @@
                                         <tr>
                                             <td><?php echo htmlentities($project['project_name']) ?></td>
                                             <td><?php echo htmlentities($project['project_date']) ?></td>
-                                            <td><a href="editPortofolio?id=1&kode=IanFelixJS"><button class="btn btn-primary">Update</button></a></td>
+                                            <td><a href="editPortofolio.php?id=<?php echo htmlentities($project['id_project']) ?>&kode=IanFelixJS"><button class="btn btn-primary">Update</button></a></td>
                                         </tr>
                                     <?php } ?>
                                     </tbody>
