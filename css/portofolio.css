@@ -104,6 +104,11 @@ nav{
     border-radius: 5px;
 }
 
+a:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+
 .latest-project{
     background-color: var(--color1);
     border-radius: 20px;
@@ -117,7 +122,6 @@ nav{
 
 .latest-project .title img{
     width: 100%;
-    
 }
 
 .latest-project .desc-project h1{
@@ -143,6 +147,10 @@ nav{
     font-weight: bold;
     color: var(--color3);
     margin-top: 10px;
+}
+
+.project{
+    height: 412px;
 }
 
 footer{
