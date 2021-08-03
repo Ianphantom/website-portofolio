@@ -32,29 +32,7 @@
             </nav>
         </div>
     </div>
-    <div class="row justify-content-md-center detail">
-        <div class="col col-md-10">
-            <h1>Website Elena Joy</h1>
-            <div class="time-information">
-                <div class="circle"></div>
-                <div class="who">Ian Felix Jonathan S. 21 July 2021</div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-9 image">
-                    <img class="mobile" src="./image/ElenaJoyMobile.png" alt="Elena Joy UI Mobile">
-                    <img class="website" src="./image/ElenaJoyWebsite.png" alt="Elna Joy UI Website">
-                </div>
-                <div class="col-md-3 text">
-                    I learned about HTML and CSS and try to implement it into a photography website. This website is fully responsive with some animation that made this website look more beautiful. I hope that you like it.
-                    <p class="tags">Tags : HTML, CSS</p>
-                    <div class="buttons">
-                        <div class="button1 text-center">Live Website</div>
-                        <div class="button2 text-center">Source</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="detail"></div>
     <footer class="mt-5 text-center">
         <h1>iRITS</h1>
         <p>Collaborate with ambitios brands and people; Let’s build something great together</p>
@@ -70,8 +48,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/vanilla-titl.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        let searchParams = new URLSearchParams(window.location.search);
+        let param = searchParams.get('kode')
+        $(function(){
+            $.ajax({
+                type: "POST",
+                url: "portofolioDetail.php",
+                data:'id='+param,
+                success: function(data){
+                    $("#detail").html(data);
+                    
+                }
+            });
+        });
     </script>
 </body>
 </html>

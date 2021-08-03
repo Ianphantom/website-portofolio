@@ -124,6 +124,14 @@ nav{
     -moz-box-shadow: 0px 20px 20px 0px rgba(123,134,197,0.25);
 }
 
+.detail .buttons .button1 a{
+    color: white;
+}
+
+.detail .buttons .button1 a:hover{
+    text-decoration: none;
+}
+
 .detail .buttons .button2{
     background: white;
     border: 1px solid var(--color4);
@@ -133,6 +141,14 @@ nav{
     box-shadow: 0px 20px 20px rgb(123,134,197, 0.25) ;
     -webkit-box-shadow: 0px 20px 20px 0px rgba(123,134,197,0.25);
     -moz-box-shadow: 0px 20px 20px 0px rgba(123,134,197,0.25);
+}
+
+.detail .buttons .button2 a{
+    color: var(--color4);
+}
+
+.detail .buttons .button2 a:hover{
+    text-decoration: none;
 }
 
 footer{

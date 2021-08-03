@@ -3,7 +3,7 @@
     $sub = mysqli_query($con,"SELECT * FROM projects ORDER BY project_date DESC");
     while($row=mysqli_fetch_array($sub)){
         ?>
-        <div class="col-sm-6 col-md-6 col-lg-4 h-100">
+        <div class="col-sm-6 col-md-6 col-lg-4 h-100 myporto mt-5">
             <a class="project-links" href="portofolioDetail.html?kode=<?php echo htmlentities($row['id_project']) ?>" style="text-decoration:none">
                 <div class="project">
                     <div class="image-place">
