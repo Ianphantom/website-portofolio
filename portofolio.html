@@ -93,8 +93,18 @@
         AOS.init();
     </script>
     <script>
-        $(function(){  $("#portofolioList").load("allPortofolio.php"); });
-
+        // $(function(){  $("#portofolioList").load("allPortofolio.php"); });
+        $(function(){
+            $.ajax({
+                type: "POST",
+                url: "allPortofolio.php",
+                data:'id=0',
+                success: function(data){
+                    $("#portofolioList").html(data);
+                    
+                }
+            });
+        });
     </script>
 </body>
 </html>
